@@ -1,17 +1,22 @@
 /* General Page Styling */
 body {
-    font-family: 'Arial', sans-serif;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
     margin: 20px;
     padding: 20px;
-    background-color: #f8f9fa;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
     text-align: center;
 }
-
 /* Styling for headings */
 h2 {
     color: #333;
     margin-bottom: 20px;
+    font-size: 24px;
 }
+
 
 /* Table Styling */
 table {
@@ -29,12 +34,22 @@ th {
     color: white;
     padding: 15px;
     font-size: 18px;
+    text-align: center;
+}
+
+title{
+    text-align: center;
 }
 
 td {
     padding: 12px;
     font-size: 16px;
+    text-align: center;
     border-bottom: 1px solid #ddd;
+}
+
+tr{
+    display: table-row;
 }
 
 tr:nth-child(even) {
@@ -77,19 +92,23 @@ form {
 }
 
 label {
-    font-size: 18px;
+    font-size: 16px;
     color: #333;
-    margin-bottom: 8px;
+    margin-bottom: 5px;
+    font-weight: 500;
+    width: 100%;
     text-align: left;
 }
 
-input, textarea {
-    font-size: 16px;
-    padding: 10px;
-    margin-bottom: 20px;
+input, textarea, select {
+    width: 100%;
+    padding: 12px;
     border: 1px solid #ddd;
     border-radius: 5px;
-    width: 100%;
+    font-size: 16px;
+    background-color: #f9f9f9;
+    margin-top: 5px;
+    box-sizing: border-box;
 }
 
 input[type="submit"] {
@@ -105,45 +124,6 @@ input[type="submit"]:hover {
     background-color: #0056b3;
 }
 
-/* Table Styling */
-table {
-    width: 80%;
-    margin: 20px auto;
-    border-collapse: collapse;
-    background-color: #ffffff;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-    border-radius: 10px;
-    overflow: hidden;
-}
-
-th {
-    background-color: #007bff;
-    color: white;
-    padding: 15px;
-    font-size: 18px;
-    text-align: left;
-}
-
-td {
-    padding: 12px;
-    font-size: 16px;
-    text-align: left;
-    border-bottom: 1px solid #ddd;
-}
-
-tr:nth-child(even) {
-    background-color: #f2f2f2;
-}
-
-tr:nth-child(odd) {
-    background-color: #ffffff;
-}
-
-tr:hover {
-    background-color: #e0f7fa;
-    transition: 0.3s;
-}
-
 /* Survey container styling */
 .survey-container {
     background-color: #ffffff;
@@ -153,32 +133,10 @@ tr:hover {
 }
 
 /* Heading styling */
-h2 {
-    color: #333;
-    font-size: 24px;
-    margin-bottom: 30px;
-}
 
-/* Label styling */
-label {
-    font-size: 16px;
-    color: #333;
-    margin-bottom: 5px;
-    font-weight: 500;
-    width: 100%;
-    text-align: left;
-}
-
-/* Input, Textarea, and Select styling */
-input, textarea, select {
-    width: 100%;
-    padding: 12px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    font-size: 16px;
-    background-color: #f9f9f9;
-    margin-top: 5px;
-    box-sizing: border-box;
+h1{
+    font-size: 2.5em;
+    margin-bottom: 20px;
 }
 
 /* Video container styling */
@@ -190,12 +148,6 @@ input, textarea, select {
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     border-radius: 10px;
     text-align: center;
-}
-
-h2 {
-    color: #333;
-    font-size: 24px;
-    margin-bottom: 30px;
 }
 
 /* Video wrapper styling */
@@ -504,18 +456,6 @@ p {
     box-shadow: 0 5px 12px rgba(0, 0, 0, 0.3);
 }
 
-/* Fade In Animation */
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-        transform: translateY(-20px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
 /* Responsive Design */
 @media (max-width: 768px) {
     .container {
@@ -527,18 +467,6 @@ p {
         font-size: 16px;
         padding: 10px;
     }
-}
-
-.box {
-    width: 60%;
-    margin: 15px auto;
-    padding: 30px;
-    font-size: 18px;
-    font-weight: bold;
-    color: white;
-    border-radius: 8px;
-    text-align: center;
-    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }
 
 /* Solid Background Color */
@@ -573,24 +501,6 @@ p {
     background-repeat: no-repeat, no-repeat;
     background-position: top left, center;
     background-size: 100px, cover;
-}
-
-/* Hover Effect */
-.box:hover {
-    transform: scale(1.05);
-    box-shadow: 0 5px 12px rgba(0, 0, 0, 0.3);
-}
-
-/* Fade In Animation */
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-        transform: translateY(-20px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
 }
 
 /* No Decoration */
@@ -649,20 +559,304 @@ p:hover {
     color: #555;
 }
 
-/* Fade In Animation */
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-        transform: translateY(-20px);
+/* Header */
+header {
+    background: linear-gradient(135deg, #3498db, #8e44ad);
+    padding: 20px;
+    color: white;
+}
+
+/* Main Content */
+.content {
+    padding: 20px;
+    font-size: 18px;
+}
+
+/* Grid Layout */
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+.grid-item {
+    background: #2ecc71;
+    color: white;
+    padding: 40px;
+    border-radius: 8px;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* Global Styling */
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    padding: 20px;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+/* Navigation Bar */
+header {
+    background-color: #333;
+    padding: 10px 0;
+}
+
+nav ul {
+    list-style: none;
+    text-align: center;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 20px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+/* Section Styling */
+section {
+    padding: 50px 0;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+h2 {
+    text-align: center;
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+.project {
+    background-color: #fff;
+    margin: 20px 0;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.project h3 {
+    font-size: 1.5em;
+}
+
+.project a {
+    color: #3498db;
+    text-decoration: none;
+}
+
+/* Contact Section */
+#contact p {
+    text-align: center;
+}
+
+#contact a {
+    color: #3498db;
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    .container {
+        width: 90%;
     }
-    to {
-        opacity: 1;
-        transform: translateY(0);
+
+    nav ul li {
+        display: block;
+        margin: 10px 0;
+    }
+
+    section {
+        padding: 20px 0;
     }
 }
 
 
+/* Responsive Design */
+@media (max-width: 768px) {
+    header {
+        font-size: 20px;
+        padding: 15px;
+    }
 
+    .content {
+        font-size: 16px;
+    }
+
+    .grid-container {
+        grid-template-columns: 1fr;
+    }
+}
+
+.todo-container {
+    background-color: white;
+    width: 400px;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+}
+
+button:hover {
+    background-color: #2980b9;
+}
+
+.search-container {
+    position: relative;
+}
+
+/* Style the search bar */
+#search-bar {
+    width: 0;
+    padding: 10px;
+    font-size: 16px;
+    border: 2px solid #3498db;
+    border-radius: 30px;
+    outline: none;
+    transition: width 0.4s ease, padding 0.4s ease; /* Animation for expanding */
+}
+
+/* Focus effect to expand the search bar */
+#search-bar:focus {
+    width: 250px;
+    padding: 10px 15px;
+}
+
+/* Optional: Add a subtle glow effect when the search bar is focused */
+#search-bar:focus {
+    box-shadow: 0 0 8px rgba(52, 152, 219, 0.6);
+}
+
+.car {
+    width: 100px;
+    height: 50px;
+    background-color: #3498db; /* A blue car */
+    position: absolute;
+    bottom: 50px; /* Position the car at the bottom */
+    animation: moveCar 5s linear infinite; /* Animation to move the car */
+}
+
+/* Keyframe animation for the car */
+@keyframes moveCar {
+    0% {
+        left: -100px; /* Start off the screen */
+    }
+    100% {
+        left: 100%; /* Move the car off the screen to the right */
+    }
+}
+
+nav ul {
+    list-style: none;
+    text-align: center;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 20px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+/* Section Styling */
+section {
+    padding: 50px 0;
+}
+.project {
+    background-color: #fff;
+    margin: 20px 0;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.project h3 {
+    font-size: 1.5em;
+}
+
+.project a {
+    color: #3498db;
+    text-decoration: none;
+}
+
+/* Contact Section */
+#contact p {
+    text-align: center;
+}
+
+#contact a {
+    color: #3498db;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    .container {
+        width: 90%;
+    }
+
+    nav ul li {
+        display: block;
+        margin: 10px 0;
+    }
+
+    section {
+        padding: 20px 0;
+    }
+}
+
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    .container {
+        width: 90%;
+    }
+
+    nav ul li {
+        display: block;
+        margin: 10px 0;
+    }
+
+    section {
+        padding: 20px 0;
+    }
+}
 
 /* Responsiveness for small screens */
 @media (max-width: 768px) {
@@ -680,3 +874,40 @@ p:hover {
         padding: 20px;
     }
 }
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+       .gradient-box {
+            width: 100%;
+            height: 300px;
+            border: 1px solid #ccc;
+            margin-bottom: 20px;
+        }
+
+        input[type="color"] {
+            width: 50px;
+            height: 50px;
+            border: none;
+            margin: 10px;
+        }
+
+        #gradientCode {
+            font-size: 16px;
+            color: #333;
+        }
+
+        .btn {
+            padding: 10px 20px;
+            background-color: #28a745;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
